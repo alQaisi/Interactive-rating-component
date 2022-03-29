@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+html{
+    font-size: 15px;
+}
+*{
+    font-family: 'Overpass', sans-serif;
+}
+body{
+    background-color: rgba(20,21,25,255);
+    height: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display: grid;
+    place-items: center;
+}
+h1{
+    margin-block-start: 1em;
+    color: white;
+}
+p{
+    font-size: 1rem;
+    color: hsl(216, 12%, 54%);
+    line-height:22px;
+    margin-block-start:-.75em;
+    margin-block-end: 1.35em;
+}
+main{
+    background-image: linear-gradient(to bottom,#1c222b,#191f27);
+    box-sizing: border-box;
+    width: 90%;
+    max-width:400px;
+    padding:30px 30px;
+    border-radius:20px;
+    position: relative;
+}
+.numbers{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:2em;
+}
+img{
+    pointer-events: none;
+}
+.thankImg{
+    display: block;
+    margin:7px auto;
+}
+.item{
+    background-color: #272e38;
+    width:47px;
+    height:47px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: hsl(216, 12%, 54%);
+    font-weight: 700;
+    transition: background-color .25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.numbers .item:hover{
+    cursor: pointer;
+    color: white;
+    background-color: hsl(216, 12%, 54%);
+}
+.item.active,.item.active:hover{
+    color: white;
+    background-color:hsl(25, 97%, 53%);
+}
+button{
+    width: 100%;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    padding:14px 0;
+    font-size: 1em;
+    font-weight: 700;
+    color: #ffedd6;
+    letter-spacing:3px;
+    background-color: hsl(25, 97%, 53%);
+    transition: background-color .25s ease-in-out;
+}
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+.response-comp{
+    text-align: center;
+}
+.rating{
+    margin: 30px auto;
+    color: #ff7415;
+    background-color: #272e38;
+    width: fit-content;
+    padding:5px 15px 1px;
+    border-radius:15px;
+}
+@media only screen and (max-width:400px){
+    html{
+        font-size:14px;
+    }
+    main{
+        padding: 30px 25px;
+    }
+}
+@media only screen and (max-width:345px){
+    .item{
+        width:38px;
+        height:38px;
+    }
+    main{
+        padding: 30px 15px;
+    }
+}
